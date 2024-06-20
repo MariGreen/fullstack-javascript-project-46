@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "type": "module",
   "description": "[![Actions Status](https://github.com/MariGreen/fullstack-javascript-project-46/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/MariGreen/fullstack-javascript-project-46/actions)",
-  "bin": "bin/gendiff.js",
+  "bin": {
+    "gendiff": "bin/gendiff.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -13,9 +15,12 @@
     "@eslint/create-config": "^1.0.0",
     "@eslint/eslintrc": "^3.1.0",
     "@eslint/js": "^9.5.0",
-    "eslint": "^9.5.0",
+    "eslint": "^9.0.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-plugin-import": "^2.29.1",
     "globals": "^15.6.0"
+  },
+  "dependencies": {
+    "commander": "^12.1.0"
   }
 }
