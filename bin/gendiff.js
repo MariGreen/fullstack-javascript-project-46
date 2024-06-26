@@ -1,9 +1,10 @@
 #!/usr/bin/env node
 /* eslint-disable no-undef */
 import { program } from 'commander';
+import genDiff from '../index.js';
 
 
-const genDiff = (filepath1, filepath2, format) => `${filepath1}${filepath2}${format}`
+// const genDiff = (filepath1, filepath2, format) => `${filepath1}${filepath2}${format}`
 
 program
   .name('gendiff')
@@ -47,6 +48,6 @@ program.parse();
 
 
 console.log('ну и чо');
+// console.log(genDiff(10, 8));
 genDiff();
-
 export default genDiff;
