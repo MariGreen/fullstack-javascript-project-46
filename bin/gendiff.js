@@ -2,24 +2,49 @@
 /* eslint-disable no-undef */
 import { program } from 'commander';
 
-const genDiff = () => {
 
-  const name = 'gendiff';
-  const version = '1.0.0';
+const genDiff = (filepath1, filepath2, format) => `${filepath1}${filepath2}${format}`
 
-  if (process.argv.includes('-h')) {
-    console.log(` 
-    Usage: ${name} [options]
+program
+  .name('gendiff')
+  .description('Compares two configuration files and shows a difference.')
+  .option('-f, --format <type>', 'output format', 'json', 'yml')
+  .version('1.0.0')
+// .arguments('<filepath1> <filepath2>')
 
-    Compares two configuration files and shows a difference.
+// program.command('gendiff')
+// .argument('<filepath1>', 'Path to first file')
+// .argument('<filepath2>', 'Path to second file')
+// .arguments('<filepath1> <filepath2>')
+// .option('-f, --format <type>', 'output format', 'json', 'yml')
+// .action(((filepath1, filepath2, options) => {
+//   // const result = genDiff(first, second, options.format)
+//   // console.log(result);
+//   console.log('filepath1:', filepath1);
+//   console.log('filepath2:', filepath2);
+//   console.log('options.format:', options.format);
+// }
+// ));
 
-    Options:
-    -V, --version        output the version number
-    -h, --help           output usage information`)
-  } else if (process.argv.includes('-V')) {
-    console.log(version)
-  }
-};
+program.parse();
+
+
+//   const name = 'gendiff';
+//   const version = '1.0.0';
+
+//   if (process.argv.includes('-h')) {
+//     console.log(` 
+//     Usage: ${name} [options]
+
+//     Compares two configuration files and shows a difference.
+
+//     Options:
+//     -V, --version        output the version number
+//     -h, --help           output usage information`)
+//   } else if (process.argv.includes('-V')) {
+//     console.log(version)
+//   }
+
 
 console.log('ну и чо');
 genDiff();
