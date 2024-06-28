@@ -1,6 +1,7 @@
 import path from 'path';
 import fs from 'fs';
 import parse from '../src/parse.js';
+import buildTree from './treeBuilder.js';
 
 // const genDiff = (filepath1, filepath2, format) => `${filepath1}${filepath2}${format}`
 
@@ -18,6 +19,10 @@ const genDiff = (filepath1, filepath2) => {
   // console.log(JSON.parse(fs.readFileSync(fullPathToFile1, 'utf-8')));
 
   console.log(parse(fs.readFileSync(fullPathToFile2, ('utf-8')), extractFormat(filepath2)));
+
+  const tree = buildTree(data1, data2);
+  console.log(tree);
+
 
 }
 //console.log('I am working');
