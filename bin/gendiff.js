@@ -49,5 +49,6 @@ program.parse();
 
 console.log('ну и чо');
 // console.log(genDiff(10, 8));
-genDiff();
+genDiff('__fixtures__/file1.json', '__fixtures__/file2.json');
+
 export default genDiff;
