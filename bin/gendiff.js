@@ -52,3 +52,4 @@ console.log('ну и чо');
 genDiff('__fixtures__/file1.json', '__fixtures__/file2.json');
 
 export default genDiff;
+

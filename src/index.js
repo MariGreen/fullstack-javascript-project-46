@@ -13,16 +13,18 @@ const genDiff = (filepath1, filepath2) => {
   const fullPathToFile1 = getFullPath(filepath1);
   const fullPathToFile2 = getFullPath(filepath2);
 
-  const data1 = getFullPath(filepath1);
-  const data2 = getFullPath(filepath2);
+  // const data1 = getFullPath(filepath1);
+  // const data2 = getFullPath(filepath2);
 
-  // console.log(JSON.parse(fs.readFileSync(fullPathToFile1, 'utf-8')));
+  // // console.log(JSON.parse(fs.readFileSync(fullPathToFile1, 'utf-8')));
 
-  console.log(parse(fs.readFileSync(fullPathToFile2, ('utf-8')), extractFormat(filepath2)));
+  // console.log(parse(fs.readFileSync(fullPathToFile2, ('utf-8')), extractFormat(filepath2)));
+  // console.log(parse(fs.readFileSync(fullPathToFile1, ('utf-8')), extractFormat(filepath1)));
 
-  const tree = buildTree(data1, data2);
-  console.log(tree);
-
+  // const tree = buildTree(data1, data2);
+  // console.log(tree);
+  console.log(JSON.parse(fs.readFileSync(fullPathToFile2, ('utf-8'))));
+  console.log(fs.readFileSync(fullPathToFile2, 'utf-8'));
 
 }
 //console.log('I am working');
